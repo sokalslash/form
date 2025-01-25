@@ -2,20 +2,20 @@
 
 .form__fieldset {
   display: flex;
-  margin: 0 0 30px;
   padding: 0;
   border: none;
-  gap: 25px;
+  gap: 30px;
 
   @media (max-width: var.$breakpoint-medium) {
     flex-direction: column;
-    gap: 29px;
+    gap: 0;
   }
 }
 
 .form__field {
   position: relative;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .form__label {
@@ -32,34 +32,24 @@
   border: var.$border;
 }
 
+.form__input--error {
+  border-color: var.$color-error;
+}
+
 .form__area {
   height: 190px;
-  margin-bottom: 25px;
 
   @media (max-width: var.$breakpoint-small) {
     height: 140px;
-    margin-bottom: 20px;
   }
 }
 
 .form__errors {
   position: absolute;
   left: 0;
-  bottom: -20px;
+  bottom: -32px;
   font-size: 14px;
   color: var.$color-error;
-}
-
-#email + .form__errors {
-  bottom: -31px;
-
-  @media (max-width: var.$breakpoint-medium) {
-    bottom: -20px;
-  }
-}
-
-.form__area + .form__errors {
-  bottom: 10px;
 }
 
 .form__submit-btn {
