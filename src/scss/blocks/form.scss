@@ -1,0 +1,70 @@
+@use "../variables.scss" as var;
+
+.form__fieldset {
+  display: flex;
+  margin: 0 0 30px;
+  padding: 0;
+  border: none;
+  gap: 25px;
+
+  @media (max-width: var.$breakpoint-medium) {
+    flex-direction: column;
+    gap: 29px;
+  }
+}
+
+.form__field {
+  position: relative;
+  width: 100%;
+}
+
+.form__label {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  padding: 3px 8px;
+  background-color: var.$color-white;
+}
+
+.form__input {
+  width: 100%;
+  padding: 13px 20px;
+  border: var.$border;
+}
+
+.form__area {
+  height: 190px;
+  margin-bottom: 25px;
+
+  @media (max-width: var.$breakpoint-small) {
+    height: 140px;
+    margin-bottom: 20px;
+  }
+}
+
+.form__errors {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  font-size: 14px;
+  color: var.$color-error;
+}
+
+#email + .form__errors {
+  bottom: -31px;
+
+  @media (max-width: var.$breakpoint-medium) {
+    bottom: -20px;
+  }
+}
+
+.form__area + .form__errors {
+  bottom: 10px;
+}
+
+.form__submit-btn {
+  display: block;
+  @media (max-width: var.$breakpoint-small) {
+    margin: 0 auto;
+  }
+}

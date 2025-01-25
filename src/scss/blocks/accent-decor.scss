@@ -1,0 +1,21 @@
+@use "../variables.scss" as var;
+
+.accent-decor {
+  position: relative;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: -10px;
+    top: -10px;
+    border-radius: 50%;
+    background-color: var.$color-accent;
+  }
+}

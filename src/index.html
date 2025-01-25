@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section__wrapper">
+            <div class="section__inner">
+              <h2 class="section__subtitle accent-decor">
+                <span>Контакты</span>
+              </h2>
+              <p class="section__title">Свяжитесь со мной</p>
+              <p class="section__accent-text">
+                Любым удобным для вас способом:
+              </p>
+              <ul class="section__links-list">
+                <li>
+                  <a
+                    class="section__link section__link--facebook"
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                  >
+                    <span class="visually-hidden">Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="section__link section__link--telegram"
+                    href="https://t.me"
+                    target="_blank"
+                  >
+                    <span class="visually-hidden">Telegram</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="section__link section__link--instagram"
+                    href="https://www.instagram.com"
+                    target="_blank"
+                  >
+                    <span class="visually-hidden">Instagram</span>
+                  </a>
+                </li>
+              </ul>
+              <p class="section__accent-text">
+                Или оставьте ваши данные и я сама вам напишу:
+              </p>
+              <form
+                class="section__form form"
+                method="post"
+                action="https://httpbin.org/post"
+              >
+                <fieldset class="form__fieldset">
+                  <div class="form__field">
+                    <label class="form__label section__text" for="name"
+                      >Ваше имя</label
+                    >
+                    <input
+                      class="form__input"
+                      id="name"
+                      type="text"
+                      name="name"
+                      placeholder="Иван"
+                    />
+                    <span class="form__errors" id="name-errors"></span>
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label section__text" for="email"
+                      >Ваша почта</label
+                    >
+                    <input
+                      class="form__input"
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="example@domain.com"
+                    />
+                    <span class="form__errors" id="email-errors"></span>
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label section__text" for="phone"
+                      >Номер телефона</label
+                    >
+                    <input
+                      class="form__input"
+                      id="phone"
+                      type="text"
+                      name="phone"
+                      placeholder="+375 XX 000 00 00"
+                    />
+                    <span class="form__errors" id="name-errors"></span>
+                  </div>
+                </fieldset>
+
+                <div class="form__field">
+                  <label class="form__label section__text" for="message"
+                    >Ваше сообщение</label
+                  >
+                  <textarea
+                    class="form__input form__area"
+                    rows="4"
+                    cols="40"
+                    id="message"
+                    name="message"
+                  ></textarea>
+                  <span class="form__errors" id="message-errors"></span>
+                </div>
+
+                <button
+                  class="link-button link-button--accent form__submit-btn"
+                  type="submit"
+                >
+                  Отправить сообщение
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
