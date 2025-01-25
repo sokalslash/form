@@ -1,4 +1,5 @@
 const ADDRESS_FOR_SEND_DATA = "https://httpbin.org/post";
+import { errorResponseServer, successResponseServer } from "./mock-data";
 
 const sendData = async (onSuccess, onFail, body) => {
   try {
@@ -11,10 +12,11 @@ const sendData = async (onSuccess, onFail, body) => {
       throw new Error(`${response.status} - ${response.statusText}`);
     }
 
-    const json = await response.json();
-    onSuccess(json);
+    const data = await response.json();
+    // onSuccess(data);
+    onSuccess(errorResponseServer);
   } catch (err) {
-    onFail(`При отправке данных на сервер произошла ошибка ${err}`);
+    alert(`При отправке данных на сервер произошла ошибка ${err}`);
   }
 };
 
