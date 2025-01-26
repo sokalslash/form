@@ -1,6 +1,7 @@
 @use "../variables.scss" as var;
 
 .section__wrapper {
+  position: relative;
   display: flex;
   padding: 120px 35px 91px 52px;
   gap: 68px;
@@ -87,4 +88,10 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 1.5;
+}
+
+.section__button {
+  position: absolute;
+  right: 5%;
+  top: 5%;
 }

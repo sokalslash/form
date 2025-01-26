@@ -1,13 +1,17 @@
 @use "../variables.scss" as var;
 
-.link-button {
+.button {
   display: inline-block;
-  padding: 13px 27px;
+  text-align: center;
   border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.link-button {
+  padding: 13px 27px;
   font-size: 14px;
   font-weight: 700;
-  text-align: center;
-  cursor: pointer;
   transition: transform 0.3s;
 
   &:hover {

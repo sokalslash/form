@@ -6,14 +6,26 @@
     <title>Form</title>
   </head>
   <body>
+    <div class="modal">
+      <button class="button modal__close-btn">
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+      <p>Хорошего дня!</p>
+    </div>
     <main>
       <section class="section">
         <div class="container">
           <div class="section__wrapper">
+            <button
+              class="button link-button link-button--accent section__button"
+              type="button"
+            >
+              Взять Машу на работу
+            </button>
             <div class="section__inner">
-              <h2 class="section__subtitle accent-decor">
+              <h1 class="section__subtitle accent-decor">
                 <span>Контакты</span>
-              </h2>
+              </h1>
               <p class="section__title">Свяжитесь со мной</p>
               <p class="section__accent-text">
                 Любым удобным для вас способом:
@@ -113,7 +125,7 @@
                 </div>
 
                 <button
-                  class="link-button link-button--accent form__submit-btn"
+                  class="button link-button link-button--accent form__submit-btn"
                   type="submit"
                 >
                   Отправить сообщение

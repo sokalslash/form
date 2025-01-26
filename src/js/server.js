@@ -14,7 +14,7 @@ const sendData = async (onSuccess, onFail, body) => {
 
     const data = await response.json();
     // onSuccess(data);
-    onSuccess(errorResponseServer);
+    onSuccess(successResponseServer);
   } catch (err) {
     alert(`При отправке данных на сервер произошла ошибка ${err}`);
   }
